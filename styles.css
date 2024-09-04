@@ -2,23 +2,71 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 100%;
+    font-family: Arial, sans-serif;
 }
 
-body {
-    background: linear-gradient(to right, #009A49 33.33%, #ffffff 33.33%, #ffffff 66.66%, #FF883E 66.66%);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.flag-background {
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, 
+        #009a49 33.33%, 
+        #fff 33.33% 66.66%, 
+        #ff883e 66.66%);
+    color: #333;
 }
 
-.gif {
-    max-width: 100%;
-    height: auto;
+.box {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffc0cb;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.6);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    margin-bottom: 20px;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.typing-text {
+    font-family: 'Handjet', sans-serif;
+    font-size: 2em;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #333;
+    animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #333;
+    }
 }
